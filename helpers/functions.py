@@ -2,8 +2,8 @@ import os
 import tensorflow as tf
 import numpy as np
 from tensorflow.python.keras.preprocessing.image import load_img, img_to_array
-from io import BytesIO
-import urllib
+# from io import BytesIO
+# import urllib
 
 image_size = 224
 
