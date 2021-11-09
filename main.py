@@ -18,6 +18,10 @@ CLASSES = ['cellphone', 'digitalwatch', 'headphone',
 new_model = load_model(PATH_MODEL)
 
 
+@app.route("/", methods=["GET"])
+def test():
+    return Response("Proyecto Final Server", status=200)
+
 @app.route("/predict", methods=["POST"])
 def healthcheck():
     url = request.json['url']
