@@ -6,7 +6,8 @@ from helpers.functions import read_and_prep_images, read_and_prep_image_from_url
 # from helpers.functions import read_and_prep_images, read_and_prep_images2
 app = Flask(__name__)
 
-PATH_MODEL = './models/pictures_model.h5'
+# PATH_MODEL = './models/pictures_model.h5'
+PATH_MODEL = './models/model_trainingv2.h5'
 CLASSES = ['cellphone', 'digitalwatch', 'headphone',
            'laptop', 'speaker', 'tablet', 'television']
 
