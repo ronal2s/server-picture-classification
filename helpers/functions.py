@@ -18,6 +18,7 @@ def read_and_prep_images(img_paths, img_height=image_size, img_width=image_size)
             for img_path in img_paths]
     img_array = np.array([img_to_array(img) for img in imgs])
     output = tf.keras.applications.resnet50.preprocess_input(img_array)
+    os.remove(img_paths[0])
     return(output)
 
 
