@@ -22,11 +22,13 @@ def read_and_prep_images(img_paths, img_height=image_size, img_width=image_size)
 
 
 def read_and_prep_image_from_url(url):
-    image_url = tf.keras.utils.get_file('delete_name', origin=url)
-    img = tf.keras.preprocessing.image.load_img(
-        image_url, target_size=(224, 224))
-    os.remove(image_url)
-    img_array = tf.keras.preprocessing.image.img_to_array(img)
+    image_url = tf.keras.utils.get_file('delete_name.jpg', origin=url)
+    print('image_url',image_url)
+    return read_and_prep_images([image_url])
+    # img = tf.keras.preprocessing.image.load_img(
+    #     image_url, target_size=(224, 224))
+    # # os.remove(image_url)
+    # img_array = tf.keras.preprocessing.image.img_to_array(img)
 
-    output = tf.keras.applications.resnet50.preprocess_input(img_array)
-    return(output)
+    # output = tf.keras.applications.resnet50.preprocess_input(img_array)
+    # return(output)

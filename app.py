@@ -11,11 +11,9 @@ PATH_MODEL = './models/model_trainingv2.h5'
 CLASSES = ['cellphone', 'digitalwatch', 'headphone',
            'laptop', 'speaker', 'tablet', 'television']
 
-# image_paths = ['speaker1.png']
-# image_paths = [
-#     'https://m.media-amazon.com/images/I/61OvV27-44L._AC_SL1500_.jpg']
-# image_data = read_and_prep_images2(image_paths)
-# print('image_data', image_data)
+# image_paths = ['test.png']
+# image_data = read_and_prep_images(image_paths)
+
 new_model = load_model(PATH_MODEL)
 
 
@@ -30,6 +28,7 @@ def healthcheck():
     image_data = read_and_prep_image_from_url(url)
     predictions = new_model.predict(image_data)
     most_accurrate_prediction = predictions.argmax(axis=1)[0]
+    
     most_accurrate_prediction = CLASSES[most_accurrate_prediction]
     response = {
         'prediction': most_accurrate_prediction
