@@ -7,9 +7,11 @@ from helpers.functions import read_and_prep_images, read_and_prep_image_from_url
 app = Flask(__name__)
 
 # PATH_MODEL = './models/pictures_model.h5'
-PATH_MODEL = './models/model_trainingv2.h5'
+PATH_MODEL = './models/model_trainingv3.h5'
+# CLASSES = ['cellphone', 'digitalwatch', 'headphone',
+#            'laptop', 'speaker', 'tablet', 'television'] #v2
 CLASSES = ['cellphone', 'digitalwatch', 'headphone',
-           'laptop', 'speaker', 'tablet', 'television']
+           'laptop', 'television'] #v3
 
 # image_paths = ['test.png']
 # image_data = read_and_prep_images(image_paths)
